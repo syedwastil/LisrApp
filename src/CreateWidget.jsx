@@ -36,9 +36,10 @@ function CreateWidget({setClose}) {
         padding: "1rem",
         border: "1px solid #ccc",
         borderRadius: "5px",
+        bgcolor:'#ffff'
       }}
     >
-      <TextField label="Title" variant="outlined" fullWidth onChange={handleChangeTitle} />
+      <TextField label="Title" variant="outlined" fullWidth onChange={handleChangeTitle}  />
       
       <TextField
         label="Description"
@@ -47,6 +48,7 @@ function CreateWidget({setClose}) {
         multiline
         rows={4}
         onChange={handleChangeDescription} 
+        sx={{mt:1}}
    
       />
             <Box sx={{ p: 1 }} textAlign="right">
