@@ -13,6 +13,8 @@ export const listSlice=createSlice({
         createList:(state,action)=>{
             let List=action.payload.List
             state.Lists.unshift(List)
+       
+
         },
         updateList:(state,action)=>{
             const {title,description}=action.payload.List
@@ -27,15 +29,15 @@ export const listSlice=createSlice({
         },
         deleteList:(state,action)=>{
     
-            const updatedLists=state.Lists.map((List)=>{
-                if(List!=undefined){
-                    if(List.id!=action.payload.List.id){
-                        return List
-                    }
-                }
+
+            const updatedLists=state.Lists.filter((List)=>{
+       
+                   return  List.id!==action.payload.List.id
+                 
+                
             })
             state.Lists=updatedLists
-            console.log(state.Lists)
+
         },
         setUpdate:(state,action)=>{
             state.update=action.payload.update;
