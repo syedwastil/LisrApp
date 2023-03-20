@@ -34,6 +34,7 @@ function UpdateWidget() {
         padding: "1rem",
         border: "1px solid #ccc",
         borderRadius: "5px",
+        bgcolor:'#ffff'
       }}
     >
       <TextField label="Title" value={updatedtitle} variant="outlined" fullWidth onChange={handleChangeTitle} />
@@ -45,6 +46,7 @@ function UpdateWidget() {
         multiline
         rows={4}
         onChange={handleChangeDescription} 
+        sx={{mt:1}}
        
       />
             <Box sx={{ p: 1 }} textAlign="right">
