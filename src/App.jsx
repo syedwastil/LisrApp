@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {useSelector} from "react-redux";
-import { Box, Typography, Button, Popover } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import CardWidget from "./CardWidget.jsx";
 import CreateWidget from "./CreateWidget.jsx";
 import UpdateWidget from "./UpdateWidget.jsx";
@@ -36,6 +36,10 @@ function App() {
         </Box>
       )}
       <Box sx={{display:'flex',flexWrap:'wrap', p: 1, m: 1, justifyContent: "center", bgcolor: "#ffffff" }}>
+      {!Lists.length && 
+      <Typography>No Items in List so far. Click create to add one.</Typography>
+
+      }
       { Lists.map((list) => {
         if(list!==undefined){
             const {id,title,description}=list;
